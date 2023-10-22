@@ -1,0 +1,53 @@
+{
+  "name": "primitives",
+  "version": "1.0.0",
+  "author": {
+    "name": "rilrom",
+    "url": "https://github.com/rilrom"
+  },
+  "license": "MIT",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/blocks": "^7.4.6",
+    "@storybook/nextjs": "^7.4.6",
+    "@storybook/react": "^7.4.6",
+    "@storybook/react-vite": "^7.4.6",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/styled-components": "^5.1.28",
+    "prettier": "^3.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.4.6"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.0",
+    "@radix-ui/react-alert-dialog": "^1.0.2",
+    "@radix-ui/react-checkbox": "^1.0.2",
+    "@radix-ui/react-dropdown-menu": "^2.0.4",
+    "@radix-ui/react-form": "^0.0.3",
+    "@radix-ui/react-icons": "^1.2.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-popover": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.2",
+    "@radix-ui/react-radio-group": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.0.3",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "styled-components": "^6.1.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "packageManager": "yarn@3.6.4"
+}
