@@ -1,6 +1,10 @@
 import * as React from 'react';
-import type { Root, Trigger, Content } from "@radix-ui/react-collapsible";
-import { StyledCollapsible, StyledCollapsibleTrigger, StyledCollapsibleContent } from './Collapsible.styled';
+import type { Root, Trigger, Content } from '@radix-ui/react-collapsible';
+import {
+  StyledCollapsible,
+  StyledCollapsibleTrigger,
+  StyledCollapsibleContent,
+} from './Collapsible.styled';
 
 const Collapsible = React.forwardRef<
   React.ElementRef<typeof Root>,

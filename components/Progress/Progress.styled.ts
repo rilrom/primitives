@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {
-  Root,
-  Indicator,
-} from '@radix-ui/react-progress';
+import { Root, Indicator } from '@radix-ui/react-progress';
 
 export const StyledProgress = styled(Root)`
   position: relative;

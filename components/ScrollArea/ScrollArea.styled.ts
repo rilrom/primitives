@@ -29,14 +29,14 @@ export const StyledScrollAreaScrollbar = styled(Scrollbar)`
   padding: 2px;
   background-color: gainsboro;
 
-  &[data-orientation="vertical"] { 
-    width: 10px; 
-  };
+  &[data-orientation='vertical'] {
+    width: 10px;
+  }
 
-  &[data-orientation="horizontal"] {
+  &[data-orientation='horizontal'] {
     flex-direction: column;
     height: 10px;
-  };
+  }
 `;
 
 export const StyledScrollAreaThumb = styled(Thumb)`
@@ -47,7 +47,7 @@ export const StyledScrollAreaThumb = styled(Thumb)`
   position: relative;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,7 +56,7 @@ export const StyledScrollAreaThumb = styled(Thumb)`
     height: 100%;
     min-width: 44px;
     min-height: 44px;
-  };
+  }
 `;
 
 export const StyledScrollAreaCorner = styled(Corner)`

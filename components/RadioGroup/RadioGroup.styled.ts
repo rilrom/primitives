@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import {
-  Root,
-  Item,
-  Indicator,
-} from '@radix-ui/react-radio-group';
+import { Root, Item, Indicator } from '@radix-ui/react-radio-group';
 
 export const StyledRadioGroup = styled(Root)`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  &[data-orientation='horizontal'] {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledRadioGroupItem = styled(Item)`
@@ -34,15 +35,15 @@ export const StyledRadioGroupIndicator = styled(Indicator)`
   width: 100%;
   height: 100%;
   position: relative;
-  
+
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
     background-color: black;
-  };
+  }
 `;
 
 export const Flex = styled.div`
@@ -51,5 +52,5 @@ export const Flex = styled.div`
 `;
 
 export const Label = styled.label`
-  padding-left: 1rem;
+  margin-inline-start: 1rem;
 `;

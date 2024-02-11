@@ -14,6 +14,11 @@ import {
   AlertDialogCancel,
 } from '.';
 
+/**
+ * A modal dialog that interrupts the user with important content and expects a response.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/alert-dialog
+ */
 export default {
   title: 'Example/AlertDialog',
   component: AlertDialog,
@@ -46,4 +51,11 @@ const RootTemplate: StoryFn<typeof AlertDialog> = args => {
 };
 
 export const Root = RootTemplate.bind({});
+
 Root.args = {};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};

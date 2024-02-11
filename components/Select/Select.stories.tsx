@@ -16,10 +16,35 @@ import {
   SelectSeparator,
 } from '.';
 
+/**
+ * Displays a list of options for the user to pick from - triggered by a button.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/select
+ */
 export default {
   title: 'Example/Select',
   component: Select,
   tags: ['autodocs'],
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+      description: 'When true, prevents the user from interacting with select.',
+      table: { defaultValue: { summary: 'false' } },
+    },
+    required: {
+      control: 'boolean',
+      description:
+        'When true, indicates that the user must select a value before the owning form can be submitted.',
+      table: { defaultValue: { summary: 'false' } },
+    },
+    dir: {
+      control: 'inline-radio',
+      options: ['ltr', 'rtl'],
+      description:
+        'The reading direction of the select when applicable. If omitted, inherits globally from DirectionProvider or assumes LTR (left-to-right) reading mode.',
+      table: { defaultValue: { summary: 'ltr' } },
+    },
+  },
 } as Meta<typeof Select>;
 
 const RootTemplate: StoryFn<typeof Select> = args => {
@@ -27,15 +52,11 @@ const RootTemplate: StoryFn<typeof Select> = args => {
     <Select {...args}>
       <SelectTrigger aria-label="Food">
         <SelectValue placeholder="Select a fruit…" />
-        <SelectIcon>
-          {'>'}
-        </SelectIcon>
+        <SelectIcon>{'>'}</SelectIcon>
       </SelectTrigger>
       <SelectPortal>
         <SelectContent>
-          <SelectScrollUpButton>
-            {'^'}
-          </SelectScrollUpButton>
+          <SelectScrollUpButton>{'^'}</SelectScrollUpButton>
           <SelectViewport>
             <SelectGroup>
               <SelectLabel>Fruits</SelectLabel>
@@ -52,7 +73,10 @@ const RootTemplate: StoryFn<typeof Select> = args => {
               <SelectLabel>Vegetables</SelectLabel>
               <SelectItem value="aubergine">Aubergine</SelectItem>
               <SelectItem value="broccoli">Broccoli</SelectItem>
-              <SelectItem value="carrot" disabled>
+              <SelectItem
+                value="carrot"
+                disabled
+              >
                 Carrot
               </SelectItem>
               <SelectItem value="courgette">Courgette</SelectItem>
@@ -69,9 +93,7 @@ const RootTemplate: StoryFn<typeof Select> = args => {
               <SelectItem value="pork">Pork</SelectItem>
             </SelectGroup>
           </SelectViewport>
-          <SelectScrollDownButton>
-            {'>'}
-          </SelectScrollDownButton>
+          <SelectScrollDownButton>{'>'}</SelectScrollDownButton>
         </SelectContent>
       </SelectPortal>
     </Select>
@@ -79,4 +101,15 @@ const RootTemplate: StoryFn<typeof Select> = args => {
 };
 
 export const Root = RootTemplate.bind({});
-Root.args = {};
+
+Root.args = {
+  disabled: false,
+  required: false,
+  dir: 'ltr',
+};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};

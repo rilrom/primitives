@@ -1,11 +1,6 @@
 import * as React from 'react';
-import type {
-  Root, Thumb
-} from '@radix-ui/react-switch';
-import {
-  StyledSwitch,
-  StyledSwitchThumb,
-} from './Switch.styled';
+import type { Root, Thumb } from '@radix-ui/react-switch';
+import { StyledSwitch, StyledSwitchThumb } from './Switch.styled';
 
 const Switch = React.forwardRef<
   React.ElementRef<typeof Root>,
@@ -27,7 +22,4 @@ const SwitchThumb = React.forwardRef<
   />
 ));
 
-export {
-  Switch,
-  SwitchThumb,
-}
+export { Switch, SwitchThumb };

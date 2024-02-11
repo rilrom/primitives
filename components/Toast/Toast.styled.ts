@@ -11,27 +11,29 @@ import {
 
 export const StyledToast = styled(Root)`
   background-color: white;
-  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  box-shadow:
+    hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
   padding: 15px;
 
-  &[data-state="open"] {
+  &[data-state='open'] {
     transform: translateX(0);
   }
 
-  &[data-state="closed"] {
+  &[data-state='closed'] {
     opacity: 0;
   }
 
-  &[data-swipe="move"] {
+  &[data-swipe='move'] {
     transform: translateX(var(--radix-toast-swipe-move-x));
   }
 
-  &[data-swipe="cancel"] {
+  &[data-swipe='cancel'] {
     transform: translateX(0);
     transition: transform 200ms ease-out;
   }
 
-  &[data-swipe="end"] {
+  &[data-swipe='end'] {
     transform: translateX(calc(100% + 25px));
   }
 `;

@@ -1,7 +1,5 @@
 import * as React from 'react';
-import type {
-  Root, List, Trigger, Content
-} from '@radix-ui/react-tabs';
+import type { Root, List, Trigger, Content } from '@radix-ui/react-tabs';
 import {
   StyledTabs,
   StyledTabsList,
@@ -49,9 +47,4 @@ const TabsContent = React.forwardRef<
   />
 ));
 
-export {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-}
+export { Tabs, TabsList, TabsTrigger, TabsContent };

@@ -3,7 +3,7 @@ import { Root } from '@radix-ui/react-separator';
 
 export const StyledSeparator = styled(Root)`
   background-color: black;
-  
+
   &[data-orientation='horizontal'] {
     height: 1px;
     width: 100%;

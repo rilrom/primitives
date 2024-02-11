@@ -1,10 +1,6 @@
 import * as React from 'react';
-import type {
-  Root
-} from '@radix-ui/react-label';
-import {
-  StyledLabel,
-} from './Label.styled';
+import type { Root } from '@radix-ui/react-label';
+import { StyledLabel } from './Label.styled';
 
 const Label = React.forwardRef<
   React.ElementRef<typeof Root>,
@@ -16,6 +12,4 @@ const Label = React.forwardRef<
   />
 ));
 
-export {
-  Label,
-};
+export { Label };

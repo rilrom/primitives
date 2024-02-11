@@ -1,9 +1,5 @@
 import * as React from 'react';
-import type {
-  Root,
-  Item,
-  Indicator,
-} from '@radix-ui/react-radio-group';
+import type { Root, Item, Indicator } from '@radix-ui/react-radio-group';
 import {
   StyledRadioGroup,
   StyledRadioGroupItem,

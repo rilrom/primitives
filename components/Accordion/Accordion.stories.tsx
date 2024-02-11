@@ -9,7 +9,7 @@ import {
 
 /**
  * A vertically stacked set of interactive headings that each reveal an associated section of content.
- * 
+ *
  * https://www.radix-ui.com/primitives/docs/components/accordion
  */
 export default {
@@ -82,10 +82,17 @@ const RootTemplate: StoryFn<typeof Accordion> = args => {
 };
 
 export const Root = RootTemplate.bind({});
+
 Root.args = {
   type: 'multiple',
   collapsible: false,
   orientation: 'vertical',
   disabled: false,
   dir: 'ltr',
+};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
 };

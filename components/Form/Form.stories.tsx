@@ -9,6 +9,11 @@ import {
   FormSubmit,
 } from '.';
 
+/**
+ * Collect information from your users using validation rules.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/form
+ */
 export default {
   title: 'Example/Form',
   component: Form,
@@ -49,4 +54,11 @@ const RootTemplate: StoryFn<typeof Form> = args => {
 };
 
 export const Root = RootTemplate.bind({});
+
 Root.args = {};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};

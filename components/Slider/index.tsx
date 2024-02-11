@@ -1,7 +1,5 @@
 import * as React from 'react';
-import type {
-  Root, Track, Range, Thumb
-} from '@radix-ui/react-slider';
+import type { Root, Track, Range, Thumb } from '@radix-ui/react-slider';
 import {
   StyledSlider,
   StyledSliderTrack,
@@ -49,9 +47,4 @@ const SliderThumb = React.forwardRef<
   />
 ));
 
-export {
-  Slider,
-  SliderTrack,
-  SliderRange,
-  SliderThumb,
-};
+export { Slider, SliderTrack, SliderRange, SliderThumb };

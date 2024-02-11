@@ -6,24 +6,18 @@ import {
   ToastViewport,
   ToastTitle,
   ToastDescription,
-  ToastAction,
   ToastClose,
 } from '.';
 
+/**
+ * A succinct message that is displayed temporarily.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/toast
+ */
 export default {
   title: 'Example/Toast',
   component: Toast,
   tags: ['autodocs'],
-  argTypes: {
-    orientation: {
-      control: 'inline-radio',
-      options: ['vertical', 'horizontal'],
-    },
-    activationMode: {
-      control: 'inline-radio',
-      options: ['automatic', 'manual'],
-    },
-  },
 } as Meta<typeof Toast>;
 
 const RootTemplate: StoryFn<typeof Toast> = args => {
@@ -53,9 +47,7 @@ const RootTemplate: StoryFn<typeof Toast> = args => {
       >
         <ToastTitle>Toast title</ToastTitle>
         <ToastDescription>Toast description</ToastDescription>
-        <ToastClose
-          asChild
-        >
+        <ToastClose asChild>
           <button>Close</button>
         </ToastClose>
       </Toast>
@@ -65,4 +57,11 @@ const RootTemplate: StoryFn<typeof Toast> = args => {
 };
 
 export const Root = RootTemplate.bind({});
+
 Root.args = {};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};

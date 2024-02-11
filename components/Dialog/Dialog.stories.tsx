@@ -12,10 +12,23 @@ import {
   DialogClose,
 } from '.';
 
+/**
+ * A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/dialog
+ */
 export default {
   title: 'Example/Dialog',
   component: Dialog,
   tags: ['autodocs'],
+  argTypes: {
+    modal: {
+      control: 'boolean',
+      description:
+        'The modality of the dialog. When set to true, interaction with outside elements will be disabled and only dialog content will be visible to screen readers.',
+      table: { defaultValue: { summary: 'true' } },
+    },
+  },
 } as Meta<typeof Dialog>;
 
 const RootTemplate: StoryFn<typeof Dialog> = args => {
@@ -41,4 +54,13 @@ const RootTemplate: StoryFn<typeof Dialog> = args => {
 };
 
 export const Root = RootTemplate.bind({});
-Root.args = {};
+
+Root.args = {
+  modal: true,
+};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};

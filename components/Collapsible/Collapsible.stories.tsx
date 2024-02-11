@@ -2,10 +2,23 @@ import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '.';
 
+/**
+ * An interactive component which expands/collapses a panel.
+ *
+ * https://www.radix-ui.com/primitives/docs/components/collapsible
+ */
 export default {
   title: 'Example/Collapsible',
   component: Collapsible,
   tags: ['autodocs'],
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+      description:
+        'When true, prevents the user from interacting with the collapsible.',
+      table: { defaultValue: { summary: 'false' } },
+    },
+  },
 } as Meta<typeof Collapsible>;
 
 const RootTemplate: StoryFn<typeof Collapsible> = args => {
@@ -30,4 +43,13 @@ const RootTemplate: StoryFn<typeof Collapsible> = args => {
 };
 
 export const Root = RootTemplate.bind({});
-Root.args = {};
+
+Root.args = {
+  disabled: false,
+};
+
+Root.parameters = {
+  controls: {
+    include: Object.keys(Root.args),
+  },
+};
